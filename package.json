@@ -1,0 +1,34 @@
+{
+  "name": "table-rotation",
+  "version": "1.0.0",
+  "main": "table-rotation.js",
+  "license": "MIT",
+  "author": {
+    "name": "Ervic Sangel",
+    "email": "ervic.sangel@gmail.com"
+  },
+  "scripts": {
+    "build": "yarn clean && tsc --project ./ && yarn copy-input-file",
+    "clean": "rimraf dist/",
+    "copy-input-file": "copyfiles -u 1 src/input/* dist/",
+    "dev": "ts-node ./src/table-rotation.ts",
+    "start": "node ./dist/table-rotation.js sample.csv",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "dependencies": {
+    "@types/node": "^16.4.13",
+    "fast-csv": "^4.3.6",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "copyfiles": "^2.4.1",
+    "jest": "^27.0.6",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.1.0"
+  }
+}
