@@ -45,7 +45,7 @@ export class RotationService {
     try {
       numArray = JSON.parse(row.json);
     } catch (e) {
-      return new Row(row.id, row.json, false);
+      return new Row(row.id, [], false);
     }
 
     if (numArray.length === 1) {
